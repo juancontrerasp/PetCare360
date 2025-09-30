@@ -92,7 +92,7 @@ hotfix/[descripcion-breve-del-fix]
 
 ### **Formato:**
 ```
-[codigo-jira] [tipo]: [descripción específica de la acción]
+[tipo]: [descripción específica de la acción]
 ```
 
 ### **Tipos de commit:**
@@ -107,13 +107,13 @@ hotfix/[descripcion-breve-del-fix]
 ### **Ejemplos de commits específicos:**
 ```bash
 # ✅ BUENOS EJEMPLOS
-git commit -m "26-feat: agregar validación de email en formulario login"
-git commit -m "24-fix: corregir error de navegación en header mobile"
+git commit -m "feat: agregar validación de email en formulario login"
+git commit -m "fix: corregir error de navegación en header mobile"
 
 
 # ❌ EVITAR 
-git commit -m "23-feat: agregar login"
-git commit -m "24-fix: arreglar bug"
+git commit -m "feat: agregar login"
+git commit -m "fix: arreglar bug"
 
 ```
 
