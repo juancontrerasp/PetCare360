@@ -222,3 +222,102 @@ Es útil para crear diferentes tipos de objetos según contexto.
 - Uso de abstracciones para desacoplar capas
 
 ---
+
+
+# BACKLOG - SPRINT 1
+
+### 1: Registrar Mascota
+**Como** dueño de mascota  
+**Quiero** registrar a mi mascota en el sistema  
+**Para que** quede disponible para agendar citas médicas
+
+**Criterios de Aceptación:**
+- Ingresar nombre, tipo, edad y nombre del dueño
+- Validar campos obligatorios
+- Asignar ID único automáticamente
+- Recibir confirmación del registro
+
+
+### 2: Agendar Cita
+**Como** dueño de mascota  
+**Quiero** agendar una cita médica para mi mascota  
+**Para que** reciba atención veterinaria
+
+**Criterios de Aceptación:**
+- Seleccionar mascota y veterinario
+- Especificar fecha, hora y motivo
+- Validar que veterinario esté disponible
+- Validar que la fecha sea futura
+- Recibir ID de cita y confirmación
+
+**Diagrama de Secuencia:**
+
+![agendarcita.png](docs/images/agendarcita.png)
+
+
+---
+
+### 3: Consultar Cita
+**Como** dueño o veterinario  
+**Quiero** consultar los detalles de una cita  
+**Para** verificar la información
+
+**Criterios de Aceptación:**
+- Buscar por ID de cita
+- Ver información completa (mascota, veterinario, fecha, motivo, estado)
+- Recibir error si la cita no existe
+
+**Diagrama de Secuencia:**
+
+![consultarcita.png](docs/images/consultarcita.png)
+
+---
+
+### 4: Cancelar Cita
+**Como** dueño de mascota  
+**Quiero** cancelar una cita agendada  
+**Para** reprogramarla si tengo inconvenientes
+
+**Criterios de Aceptación:**
+- Cancelar por ID de cita
+- Cambiar estado a CANCELLED
+- Mantener el registro en el sistema
+- Recibir confirmación
+
+**Diagrama de Secuencia:**
+
+![cancelarcita.png](docs/images/cancelarcita.png)
+
+---
+
+### 5: Ver Agenda de Veterinario
+**Como** veterinario  
+**Quiero** ver todas mis citas asignadas  
+**Para** organizar mi agenda
+
+**Criterios de Aceptación:**
+- Filtrar por ID de veterinario
+- Ver todas las citas (todos los estados)
+- Ver información completa de cada mascota
+
+**Diagrama de Secuencia:**
+
+![revisarcitas.png](docs/images/revisarcitas.png)
+
+
+---
+
+## PLANEACIÓN DE RAMAS
+
+### Rama: `feature/vet_implementation`
+
+**Objetivo:** Implementar gestión completa de veterinario.
+
+### Rama: `feature/pet_implementation`
+
+**Objetivo:** Implementar gestión completa de mascotas.
+
+### Rama: `feature/appointment_implementation`
+
+**Objetivo:** Implementar gestión completa de citas.
+
