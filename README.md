@@ -321,3 +321,114 @@ Es útil para crear diferentes tipos de objetos según contexto.
 
 **Objetivo:** Implementar gestión completa de citas.
 
+# 🧩 Nuevas Funcionalidades del Sprint Actual
+
+Durante este sprint se desarrollaron e integraron los siguientes módulos y mejoras:
+
+## 🛒 Módulo de Carrito, Checkout y Facturación Electrónica
+
+- Creación de **API REST** para el flujo completo del carrito de compras, checkout y emisión de facturas electrónicas.
+- Integración con servicios de facturación simulada en modo sandbox.
+- Validación automática del stock antes de finalizar la compra.
+- Generación de facturas electrónicas con diferentes tipos (consulta médica, productos, servicios adicionales).
+
+## 🧱 Módulo de Productos y Categorías
+
+- Se creó el **módulo de gestión de productos**, con CRUD completo.
+- Organización por **categorías y subcategorías**, optimizando la búsqueda y navegación.
+- Integración con MongoDB mediante repositorios reactivos.
+- Endpoints REST documentados con Swagger.
+
+## ⚙️ Implementación del *Factory Method*
+
+- Aplicación del patrón **Factory Method** para la creación dinámica de diferentes tipos de facturas
+- Permite extender nuevos tipos de facturación sin modificar el código existente.
+- Se garantizó cumplimiento del principio **Open/Closed** de SOLID.
+
+---
+
+# 🧪 Estrategia de Pruebas
+
+Se definieron **escenarios de prueba unitaria, integración y TDD**, siguiendo la pirámide de pruebas:
+
+- **Unitarias:**  Validan la lógica de negocio de servicios y controladores.
+- **Integración:**  Evalúan la conexión con MongoDB y la comunicación entre microservicios.
+- **TDD:**  Las funcionalidades principales del carrito y facturación fueron desarrolladas con enfoque *test-first*.
+
+### 🧩 Cobertura y Métricas
+
+- **Jacoco:** integrado para medir cobertura de código.
+
+![jacocosito.png](docs/images/jacocosito.png)
+
+😭 Por algunas fallas técnicas inexplicables por mi parte, la cobertura de jacoco solo es de un 15% así después de tener la cobertura de los controllers en un 97%.
+
+- **SonarQube:** configurado para análisis estático y seguimiento de deuda técnica.
+
+---
+
+# 🧮 Diagramación Técnica
+
+Se añadieron nuevos diagramas al repositorio:
+
+### 🔹 Casos de Uso Actualizados
+- Ahora incluyen el proceso de compra, emisión de factura y gestión de inventario.
+
+### 🔹 Modelo de Contexto
+- Actualizado con la conexión a MongoDB y nuevos microservicios del dominio de facturación.
+
+### 🔹 Diagrama de Componentes
+
+![componentes.png](docs/images/componentes.png)
+
+---
+
+# 🧠 Documentación del Modelo MVC
+
+Se documentó el modelo **Modelo-Vista-Controlador (MVC)** implementado en Spring Boot:
+
+| Capa | Responsabilidad |
+|------|-----------------|
+| **Model** | Lógica de negocio y entidades del dominio |
+| **Controller** | Exposición de endpoints REST |
+| **Service** | Coordinación de reglas de negocio |
+| **Repository** | Persistencia en MongoDB |
+
+---
+
+# 📋 Backlog del Sprint
+
+| Historia | Descripción | Estado |
+|-----------|-------------|--------|
+| HU-01 | Crear API REST para carrito de compras y checkout | ✅ Completado |
+| HU-02 | Diseñar módulo de productos y categorías | ✅ Completado |
+| HU-03 | Implementar Factory Method para facturación | ✅ Completado |
+| HU-04 | Definir y ejecutar pruebas unitarias e integración | ✅ Completado |
+| HU-05 | Integrar Jacoco | ✅ Completado |
+| HU-06 | Diagramar casos de uso y contexto actualizado | ✅ Completado |
+| HU-07 | Conectar con MongoDB y crear documentos | ✅ Completado |
+| HU-08 | Crear diagrama de componentes | ✅ Completado |
+| HU-09 | Documentar modelo MVC | ✅ Completado |
+
+---
+
+# 🧾 Evidencia del Sprint
+
+### 📆 Semana 3:
+- Diseño de arquitectura de productos y definición de entidades.
+- Configuración inicial de MongoDB y estructura base del repositorio.
+- Desarrollo del módulo de carrito y facturación.
+- Implementación del Factory Method y pruebas unitarias iniciales.
+- Integración con Jacoco, SonarQube y ajustes finales de cobertura.
+- Actualización de diagramas y documentación técnica.
+
+---
+
+# 📚 Resultados del Sprint
+
+✅ API REST funcional para carrito, checkout y facturación  
+✅ MongoDB integrado como base de datos principal
+✅ Documentación técnica y diagramas actualizados  
+✅ Implementación de patrón Factory Method  
+✅ Cumplimiento de todos los criterios de aceptación del backlog  
+✖️ Por algunas fallas técnicas inexplicables por mi parte, la cobertura de jacoco solo es de un 15% así después de tener la cobertura de los controllers en un 97%.
