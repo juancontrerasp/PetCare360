@@ -73,7 +73,6 @@ public class CheckoutService {
         invoiceService.generateInvoiceForOrder(order, request.getCustomerName(),
                 request.getCustomerEmail());
 
-        // Clear cart
         cartRepository.deleteByUserId(request.getUserId());
 
         return mapToResponseDTO(order);

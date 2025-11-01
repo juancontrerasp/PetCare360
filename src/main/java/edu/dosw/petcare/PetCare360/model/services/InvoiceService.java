@@ -40,7 +40,6 @@ public class InvoiceService {
         InvoiceFactory factory = factoryProvider.getFactory(InvoiceType.MEDICAL_CONSULTATION);
         Invoice invoice = factory.createInvoice(appointment);
 
-        // Get pet owner name if not provided
         if (customerName == null || customerName.isEmpty()) {
             Pet pet = petRepository.findById(appointment.getPetId())
                     .orElseThrow(() -> new RuntimeException("Pet not found"));
