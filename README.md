@@ -231,7 +231,7 @@ Es útil para crear diferentes tipos de objetos según contexto.
 **Quiero** registrar a mi mascota en el sistema  
 **Para que** quede disponible para agendar citas médicas
 
-**Criterios de Aceptación:**
+**Criterios de Aceptación:**/-******************************
 - Ingresar nombre, tipo, edad y nombre del dueño
 - Validar campos obligatorios
 - Asignar ID único automáticamente
